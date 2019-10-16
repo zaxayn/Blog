@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="资源官方文档：Swift Docs感谢社区翻译的中文版：Swift 中文 基础部分1.Swift 还增加了 Objective-C 中没有的高阶数据类型比如元组（Tuple）,元组可以让你创建或者传递一组数据，比如作为函数的返回值时，你可以用一个元组可以返回多个值。 2.类型注解需要在常量或者变量名后面加上一个冒号和空格，然后加上类型名称。  一般来说你很少需要写类型注解。如果你在声明常量或者变量">
+<meta name="keywords" content="swift">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Swift">
+<meta property="og:url" content="http://www.zaxayn.com/2019/10/16/swift/index.html">
+<meta property="og:site_name" content="Yun Zhao">
+<meta property="og:description" content="资源官方文档：Swift Docs感谢社区翻译的中文版：Swift 中文 基础部分1.Swift 还增加了 Objective-C 中没有的高阶数据类型比如元组（Tuple）,元组可以让你创建或者传递一组数据，比如作为函数的返回值时，你可以用一个元组可以返回多个值。 2.类型注解需要在常量或者变量名后面加上一个冒号和空格，然后加上类型名称。  一般来说你很少需要写类型注解。如果你在声明常量或者变量">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-16T13:22:13.725Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Swift">
+<meta name="twitter:description" content="资源官方文档：Swift Docs感谢社区翻译的中文版：Swift 中文 基础部分1.Swift 还增加了 Objective-C 中没有的高阶数据类型比如元组（Tuple）,元组可以让你创建或者传递一组数据，比如作为函数的返回值时，你可以用一个元组可以返回多个值。 2.类型注解需要在常量或者变量名后面加上一个冒号和空格，然后加上类型名称。  一般来说你很少需要写类型注解。如果你在声明常量或者变量">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Swift</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2019/10/01/bitcoin-whitepaper/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://www.zaxayn.com/2019/10/16/swift/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://www.zaxayn.com/2019/10/16/swift/&text=Swift"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://www.zaxayn.com/2019/10/16/swift/&title=Swift"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://www.zaxayn.com/2019/10/16/swift/&is_video=false&description=Swift"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Swift&body=Check out this article: http://www.zaxayn.com/2019/10/16/swift/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://www.zaxayn.com/2019/10/16/swift/&title=Swift"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://www.zaxayn.com/2019/10/16/swift/&title=Swift"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://www.zaxayn.com/2019/10/16/swift/&title=Swift"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://www.zaxayn.com/2019/10/16/swift/&title=Swift"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://www.zaxayn.com/2019/10/16/swift/&name=Swift&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#资源"><span class="toc-number">1.</span> <span class="toc-text">资源</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基础部分"><span class="toc-number">1.1.</span> <span class="toc-text">基础部分</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Swift
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Yun Zhao</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-10-16T08:00:00.000Z" itemprop="datePublished">2019-10-16</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/swift/">swift</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h1><p>官方文档：<a href="https://docs.swift.org/swift-book/" target="_blank" rel="noopener">Swift Docs</a><br>感谢社区翻译的中文版：<a href="https://swiftgg.gitbook.io/swift/" target="_blank" rel="noopener">Swift 中文</a></p>
+<h2 id="基础部分"><a href="#基础部分" class="headerlink" title="基础部分"></a><a href="https://swiftgg.gitbook.io/swift/swift-jiao-cheng/01_the_basics" target="_blank" rel="noopener">基础部分</a></h2><p>1.Swift 还增加了 Objective-C 中没有的高阶数据类型比如<code>元组（Tuple）</code>,元组可以让你创建或者传递一组数据，比如作为函数的返回值时，你可以用一个元组可以返回多个值。</p>
+<p>2.<code>类型注解</code>需要在常量或者变量名后面加上一个<code>冒号和空格</code>，然后加上类型名称。</p>
+<blockquote>
+<p>一般来说你很少需要写类型注解。如果你在声明常量或者变量的时候赋了一个初始值，Swift 可以推断出这个常量或者变量的类型，请参考 类型安全和类型推断。</p>
+</blockquote>
+<p>3.Swift <code>并不强制</code>要求你在每条语句的<code>结尾处使用分号</code>。</p>
+<p>4.Swift 提供了8、16、32和64位的有符号和无符号整数类型。这些整数类型和 C 语言的命名方式很像，比如8位无符号整数类型是 UInt8，32位有符号整数类型是 Int32 。就像 Swift 的其他类型一样，整数类型采用大写命名法。</p>
+<p>5.浮点数是<code>有小数部分</code>的数字，Double 表示64位浮点数，Float 表示32位浮点数。</p>
+<p>6.类型别名（type aliases）就是给<code>现有类型定义另一个名字</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">typealias AudioSample = UInt16</span><br><span class="line">var maxAmplitudeFound = AudioSample.min</span><br><span class="line">// maxAmplitudeFound 现在是 0</span><br></pre></td></tr></table></figure>
+
+<p>7.元组（tuples）把多个值组合成一个复合值。<code>元组内的值可以是任意类型</code>，并不要求是相同类型。(404, “Not Found”) 元组把一个 Int 值和一个 String 值组合起来表示 HTTP 状态码的两个部分：一个数字和一个人类可读的描述。这个元组可以被描述为“一个类型为 (Int, String) 的元组”。</p>
+<p>8.如果你只需要一部分元组值，分解的时候<code>可以把要忽略的部分用下划线（_）标记</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let (justTheStatusCode, _) = http404Error</span><br><span class="line">print(&quot;The status code is \(justTheStatusCode)&quot;)</span><br><span class="line">// 输出“The status code is 404”</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>作为函数返回值时，元组非常有用。一个用来获取网页的函数可能会返回一个 (Int, String) 元组来描述是否获取成功。和只能返回一个类型的值比较起来，一个包含两个不同类型值的元组可以让函数的返回信息更有用。请参考 函数参数与返回值。</p>
+</blockquote>
+<p>9.可选类型表示两种可能： 有值， 你可以解析可选类型访问这个值， 或者根本没有值.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var serverResponseCode: Int? = 404</span><br><span class="line">// serverResponseCode 包含一个可选的 Int 值 404</span><br><span class="line">serverResponseCode = nil</span><br><span class="line">// serverResponseCode 现在不包含值</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>nil 不能用于非可选的常量和变量。</p>
+</blockquote>
+<p>10.一个 do 语句创建了一个新的包含作用域，使得错误能被传播到一个或多个 catch 从句。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">func canThrowAnError() throws &#123;</span><br><span class="line">    // 这个函数有可能抛出错误</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>一个函数可以通过<code>在声明中</code>添加 throws 关键词来抛出错误消息。当你的函数能抛出错误消息时，你应该在表达式中<code>前置 try 关键词</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">do &#123;</span><br><span class="line">    try canThrowAnError()</span><br><span class="line">    // 没有错误消息抛出</span><br><span class="line">&#125; catch &#123;</span><br><span class="line">    // 有一个错误消息抛出</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>11.if let 使用可选绑定（optional binding）来判断可选类型是否包含值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if let actualNumber = Int(possibleNumber) &#123;</span><br><span class="line">    print(&quot;\&apos;\(possibleNumber)\&apos; has an integer value of \(actualNumber)&quot;)</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    print(&quot;\&apos;\(possibleNumber)\&apos; could not be converted to an integer&quot;)</span><br><span class="line">&#125;</span><br><span class="line">// 输出“&apos;123&apos; has an integer value of 123”</span><br></pre></td></tr></table></figure>
+
+<p>“如果 Int(possibleNumber) 返回的可选 Int 包含一个值，创建一个叫做 actualNumber 的新常量并将可选包含的值赋给它。”</p>
+<p>12.使用断言进行调试</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let age = -3</span><br><span class="line">assert(age &gt;= 0, &quot;A person&apos;s age cannot be less than zero&quot;)</span><br><span class="line">// 因为 age &lt; 0，所以断言会触发</span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，只有 age &gt;= 0 为 true 时，即 age 的值非负的时候，代码才会继续执行。如果 age 的值是负数，就像代码中那样，age &gt;= 0 为 false，断言被触发，终止应用。</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#资源"><span class="toc-number">1.</span> <span class="toc-text">资源</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基础部分"><span class="toc-number">1.1.</span> <span class="toc-text">基础部分</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://www.zaxayn.com/2019/10/16/swift/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://www.zaxayn.com/2019/10/16/swift/&text=Swift"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://www.zaxayn.com/2019/10/16/swift/&title=Swift"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://www.zaxayn.com/2019/10/16/swift/&is_video=false&description=Swift"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Swift&body=Check out this article: http://www.zaxayn.com/2019/10/16/swift/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://www.zaxayn.com/2019/10/16/swift/&title=Swift"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://www.zaxayn.com/2019/10/16/swift/&title=Swift"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://www.zaxayn.com/2019/10/16/swift/&title=Swift"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://www.zaxayn.com/2019/10/16/swift/&title=Swift"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://www.zaxayn.com/2019/10/16/swift/&name=Swift&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 Yun Zhao
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<!-- clipboard -->
+
+  <script src="/lib/clipboard/clipboard.min.js"></script>
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight .code pre").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      target: function(trigger) {
+        return trigger.nextElementSibling;
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":200,"height":400,"hOffset":0,"vOffset":30},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+</html>
